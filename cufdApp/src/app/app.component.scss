@@ -1,0 +1,31 @@
+@media screen and (max-width: 1024px) {
+  #logo {
+    max-width: 150px;
+    max-height: 160px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #logo {
+    max-width: 300px;
+    max-height: 320px;
+  }
+}
+#logo {
+  border: solid;
+  border-color: white;
+}
+.search-bar-container {
+  text-align: center;
+  .search-bar {
+    width: 75%;
+    height: 30%;
+    margin: 7%;
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: #edabb3;
+  }
+  .search-bar:focus {
+    outline: none;
+  }
+}
