@@ -1,5 +1,6 @@
 <div class="container-fluid">
   <div class="row">
+    <!-- Logo -->
     <a class="logo-container" href="/">
       <img class="img-fluid img-thumbnail" id="logo" src="/assets/img/cfalogo.png" alt="logo">
     </a>
@@ -7,13 +8,17 @@
     </div>
     <!-- Search Bar -->
     <div class="col search-bar-container">
-        <img id="search-icon" src="/assets/img/search-icon.png" alt="search-icon">
+        <!-- <img id="search-icon" src="/assets/img/search-icon.png" alt="search-icon"> -->
+        <i id="search-icon" class="material-icons">search</i>
+        <a class="help-icon-container" href="#">
+          <i id=help-icon class="material-icons">help_outline</i>
+        </a>
         <input class="search-bar" type="text" name="search" value="" placeholder="Search">
     </div>
   </div>
 
   <div class="row">
-    <!-- Navbar  -->
+    <!-- Main Navbar  -->
     <nav class="nav flex-column main-nav">
       <a class="nav-link" href="#">New Request</a>
       <a class="nav-link" href="#">My Requests</a>
@@ -22,6 +27,7 @@
 
     <div class="col-md">
       <div class="row">
+        <!-- Secondary Navbar -->
         <nav class="navbar navbar-expand navbar-light nav-tabs secondary-nav">
           <ul class="navbar-nav nav-fill">
             <li class="nav-item">
