@@ -44,19 +44,12 @@
   }
 }
 
-// #help-icon a:hover {
-//   color: #8E969C;
-// }
-
-
 #help-icon {
   position: absolute;
   margin-top: 9px;
   margin-bottom: 9px;
   padding-top: 4px;
   margin-left: 45%;
-  // color: #7f909c;
-  // color: black;
 }
 
 .help-icon-container{
@@ -112,4 +105,9 @@
   ul {
     width: 100%;
   }
+}
+
+// Tiket List
+#ticket-list {
+  padding: .5rem;
 }

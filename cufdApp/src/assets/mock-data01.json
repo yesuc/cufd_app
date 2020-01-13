@@ -1,0 +1,134 @@
+[
+  {
+    "id":  "501",
+    "status": "open",
+    "priority": "high",
+    "shortDescription": "cold fries",
+    "description": "I hate you!!!!!!!",
+    "actionsTaken": ["created", "sentEmailResponse", "receivedDeathThreat"],
+    "submissionDate": "12/8/2019",
+    "updatedOn": "12/18/2019",
+    "source": "helpdesk"
+  },
+  {
+    "id": "502",
+    "status": "open",
+    "priority": "high",
+    "shortDescription": "unhappy customer",
+    "description": "You forgot the CFA sauce",
+    "actionsTaken": ["created", "sentRewardResponse"],
+    "submissionDate": "12/1/2019",
+    "updatedOn": "12/11/2019",
+    "source": "helpdesk"
+  },
+  {
+    "id": "503",
+    "status": "closed",
+    "priority": "high",
+    "shortDescription": "Rude",
+    "description": "The server taking my order was very rude",
+    "actionsTaken": ["created", "closed"],
+    "submissionDate": "11/8/2019",
+    "updatedOn": "11/18/2019",
+    "source": "phone"
+  },
+  {
+    "id": "504",
+    "status": "in progress",
+    "priority": "medium",
+    "shortDescription": "long wait",
+    "description": "I waited nearly 8,462 minutes for my food",
+    "actionsTaken": ["created", "sentCarrierPigeon"],
+    "submissionDate": "12/8/2001",
+    "updatedOn": "12/8/2019",
+    "source": "fax"
+  },
+  {
+    "id":  "505",
+    "status": "closed",
+    "priority": "low",
+    "shortDescription": "missing silverware",
+    "description": "I had nothing to eat my nuggets with. Now my hands are dirty :(",
+    "actionsTaken": ["created", "mailedFork"],
+    "submissionDate": "12/2/2019",
+    "updatedOn": "12/4/2019",
+    "source": "helpdesk"
+  },
+  {
+    "id":  "506",
+    "status": "open",
+    "priority": "high",
+    "shortDescription": "weed",
+    "description": "server offered 'special' menu item",
+    "actionsTaken": ["created", "policeCalled"],
+    "submissionDate": "12/7/2019",
+    "updatedOn": "12/7/2019",
+    "source": "twitter"
+  },
+  {
+    "id":  "507",
+    "status": "closed",
+    "priority": "low",
+    "shortDescription": "bathroom was dirty",
+    "description": "They really need to clean their bathroom better",
+    "actionsTaken": ["created", "resolved", "closed"],
+    "submissionDate": "11/5/2019",
+    "updatedOn": "11/18/2019",
+    "source": "phone"
+  },
+  {
+    "id":  "508",
+    "status": "in progress",
+    "priority": "low",
+    "shortDescription": "<3 Chick-fil-A",
+    "description": "Chick-fil-A is my all time favorite place to eat!",
+    "actionsTaken": ["created", "closed"],
+    "submissionDate": "12/8/2019",
+    "updatedOn": "12/8/2019",
+    "source": "phone"
+  },
+  {
+    "id":  "509",
+    "status": "in progress",
+    "priority": "medium",
+    "shortDescription": "food",
+    "description": "Didn't get what I ordered",
+    "actionsTaken": ["created", "sentRewardResponse"],
+    "submissionDate": "12/18/2019",
+    "updatedOn": "12/20/2019",
+    "source": "helpdesk"
+  },
+  {
+    "id":  "510",
+    "status": "open",
+    "priority": "high",
+    "shortDescription": "slow",
+    "description": "The drive thru was really slow",
+    "actionsTaken": ["created"],
+    "submissionDate": "12/8/2019",
+    "updatedOn": "",
+    "source": "helpdesk"
+  },
+  {
+    "id":  "511",
+    "status": "closed",
+    "priority": "medium",
+    "shortDescription": "App crashed",
+    "description": "I couldn't complete my order due to app failure",
+    "actionsTaken": ["created", "createdBugTicket", "closed"],
+    "submissionDate": "12/8/2019",
+    "updatedOn": "12/8/2019",
+    "source": "helpdesk"
+  },
+  {
+    "id":  "512",
+    "status": "in progress",
+    "priority": "critical",
+    "shortDescription": "Spotlight is amazing",
+    "description": "Spotlight is clearly the most impressive piece of dev work known to man",
+    "actionsTaken": ["created", "gaveSpotlightDevsRaises"],
+    "submissionDate": "12/7/2019",
+    "updatedOn": null,
+    "source": "phone"
+  }
+]
