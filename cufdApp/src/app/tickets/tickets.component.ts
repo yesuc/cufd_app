@@ -1,26 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { TicketsService } from './tickets.service';
-import { Ticket, TICKET_ATTR } from '../ticket';
-import { HttpClient } from '@angular/common/http';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Ticket } from '../ticket';
 
 @Component({
   selector: 'app-tickets',
   templateUrl: './tickets.component.html',
-  styleUrls: ['./tickets.component.scss'],
-  providers: [TicketsService]
+  styleUrls: ['./tickets.component.scss']
 })
-export class TicketsComponent implements OnInit {
-  tickets: Ticket[];
-  ticket_attr = TICKET_ATTR;
-
-  constructor(private ticketsService: TicketsService) { }
-
-  ngOnInit() {
-    this.getTickets();
-  }
-
-  getTickets(): void {
-    this.ticketsService.getTickets().subscribe(tickets => (this.tickets = tickets));
-  }
-
+export class TicketsComponent {
+  @Input() public tickets: Ticket[];
+  @Input() public columns: any[];
+  @Input() public currentSort: string;
+  @Input() public sortReversed: boolean;
+  @Output() public sort = new EventEmitter<any>();
 }

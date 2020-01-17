@@ -9,4 +9,4 @@ export class Ticket {
   updatedOn: string;
   source: string;
 }
-export const TICKET_ATTR = ["id", "status", "priority", "shortDescription", "description", "actionsTaken", "submissionDate", "updatedOn","source"];
+export const TICKET_ATTR = ["id", "status", "priority", "shortDescription", "submissionDate", "updatedOn","source"];

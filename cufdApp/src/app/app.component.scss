@@ -1,41 +1,55 @@
-@media screen and (max-width: 1440px) {
-  #logo {
-    max-width: 150px;
-    max-height: 160px;
-  }
-}
-@media screen and (min-width: 1441px) {
-  #logo {
-    max-width: 300px;
-    max-height: 310px;
-  }
-}
-
-#logo {
-  border: solid;
+.logo {
+  max-width: 150px;
+  max-height: 160px;
   border-color: white;
-}
-
-.vertical-line {
-  border-left: thin solid #8E969C;
-  height: 100px;
-  margin-top: 2%;
-  margin-bottom:2%;
 }
 
 .search-bar-container {
   margin-top: 4%;
   margin-bottom: 4%;
   padding-left: 50px;
-  text-align: center;
+  text-align: left;
 }
 
-@media screen and (max-width: 1024px ) {
-  .search-bar {
-    width: 50%;
-    height: 70%;
-  }
+.search-icon {
+  position: absolute;
+  float: left;
+  text-align: left;
+  width: 30px;
+  height: 30px;
+  padding-top: 7px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  margin-left: 5px;
+  color: #dd0031;
 }
+
+.search-bar {
+  padding: 10px 30px 10px 30px;
+  border-style: solid;
+  border-radius: 30px;
+  border-color: #dd0031;
+  outline: none;
+}
+
+.search-button {
+  margin: 10px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #004f71;
+  color: #fff;
+  outline: none;
+}
+
+.clear-button {
+  margin: 10px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: #004f71;
+  color: #fff;
+  outline: none;
+}
+
 
 @media screen and (min-width: 1025px) and (max-width: 2000px){
   .search-bar {
@@ -44,70 +58,32 @@
   }
 }
 
-#help-icon {
+.help-icon {
+  color: #8E969C;
   position: absolute;
   margin-top: 9px;
   margin-bottom: 9px;
-  padding-top: 4px;
+  padding-top: 7px;
   margin-left: 45%;
 }
 
-.help-icon-container{
-  color: #a6bbc9;
+.help-text {
+  visibility: hidden;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  color: black;
+  z-index: 1;
+  left: -200px;
+
+  padding: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  font-size: 14px;
+  overflow: hidden;
+  font-weight: 700;
 }
 
-.help-icon-container:hover {
-    color: #8E969C;
-}
-
-.search-bar-container {
-  text-align: left;
-  #search-icon {
-    position: absolute;
-    float: left;
-    text-align: left;
-    width: 30px;
-    height: 30px;
-
-    padding-top: 4px;
-    margin-top: 9px;
-    margin-bottom: 9px;
-    margin-left: 5px;
-    color: #dd0031;
-  }
-  .search-bar {
-    padding: 10px 30px 10px 30px;
-    border-style: solid;
-    border-radius: 30px;
-    border-color: #dd0031;
-      color: #8E969C;
-  }
-  .search-bar:focus {
-    outline: none;
-  }
-}
-
-// Main Nav
-.main-nav {
-  background-color: #66747e;
-  width: 150px;
-  text-align: center;
-  a {
-    color: white;
-    height: 100px;
-    padding: 2.5em 1em;
-  }
-}
-
-// Secondary Nav
-.secondary-nav {
-  width: 100%;
-  ul {
-    width: 100%;
-  }
-}
-
-// Tiket List
-#ticket-list {
-  padding: .5rem;
+.help-icon:hover .help-text {
+  visibility: visible;
 }

@@ -9,6 +9,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { AppComponent } from './app.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { ConfigComponent } from './config/config.component';
+import { MatChipsModule } from "@angular/material/chips";
+import { MatIconModule } from "@angular/material/icon";
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { ConfigComponent } from './config/config.component';
     NgbModule,
     HttpClientModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatChipsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

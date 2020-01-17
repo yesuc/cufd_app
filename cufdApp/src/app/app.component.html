@@ -1,69 +1,26 @@
 <div class="container-fluid">
   <div class="row">
     <!-- Logo -->
-    <a class="logo-container" href="/">
-      <img class="img-fluid img-thumbnail" id="logo" src="/assets/img/cfalogo.png" alt="logo">
-    </a>
-    <div class="vertical-line">
-    </div>
+    <img class="logo" src="/assets/img/cfalogo.png" alt="logo">
     <!-- Search Bar -->
     <div class="col search-bar-container">
-        <i id="search-icon" class="material-icons">search</i>
-        <a class="help-icon-container" href="#">
-          <i id=help-icon class="material-icons">help_outline</i>
-        </a>
-        <input class="search-bar" type="text" name="search" value="" placeholder="Search">
+      <i class="material-icons search-icon">search</i>
+      <i class="material-icons help-icon">help_outline
+        <span class="help-text">Search here using any attribute contained in the ticket</span>
+      </i>
+      <input class="search-bar" id="input" type="text" name="search" value="" placeholder="Search">
+      <button class="search-button" (click)="submitSearch()">Submit</button>
+      <button class="clear-button" *ngIf="showClearSearch" (click)="clearSearch()">Clear Search</button>
     </div>
   </div>
-
   <div class="row">
-    <!-- Main Navbar  -->
-    <nav class="nav flex-column main-nav">
-      <a class="nav-link" href="#">New Request</a>
-      <a class="nav-link" href="#">My Requests</a>
-      <a class="btn btn-primary" href="#filter-collapse" data-toggle="collapse" role="button" aria-controls="filter-collapse"> Filter </a>
-
-      <div class="collapse" id="filter-collapse">
-        My Filters Here
-      </div>
-    </nav>
-
     <div class="col-md">
-      <!-- Secondary Navbar -->
-      <!-- <div class="row nav-tabs">
-        <div class="col nav-item">
-          <a class="nav-link btn btn-link" href="#"> ID Number </a>
-        </div>
-        <div class="col nav-item">
-          <a class="nav-link btn btn-link" href="#"> Status</a>
-        </div>
-        <div class="col nav-item">
-          <a class="nav-link btn btn-link" href="#"> Priorty </a>
-        </div>
-        <div class="col nav-item">
-          <a class="nav-link btn btn-link" href="#"> Short Description </a>
-        </div>
-        <div class="col nav-item">
-          <a class="nav-link btn btn-link" href="#"> Description </a>
-        </div>
-        <div class="col nav-item">
-          <a class="nav-link btn btn-link" href="#"> Actions Taken </a>
-        </div>
-        <div class="col nav-item">
-          <a class="nav-link btn btn-link" href="#"> Submission Date </a>
-        </div>
-        <div class="col nav-item">
-          <a class="nav-link btn btn-link" href="#"> Updated On </a>
-        </div>
-        <div class="col nav-item">
-          <a class="nav-link btn btn-link" href="#"> Source </a>
-        </div>
-      </div> -->
-
-      <app-tickets>
+      <app-tickets [tickets]="filteredTickets"
+                   [columns]="columns"
+                   [currentSort]="currentSort"
+                   [sortReversed]="sortReversed"
+                   (sort)="sort($event)">
       </app-tickets>
     </div>
-
   </div>
-
 </div>

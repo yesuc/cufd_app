@@ -1,85 +1,64 @@
-<table mat-table [dataSource]="tickets" class="mat-elevation-z8">
-
+<table mat-table [dataSource]="tickets" class="mat-elevation-z8 data-table">
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef> Number </th>
+    <th class="table-header" mat-header-cell *matHeaderCellDef (click)="sort.emit('number')">
+      Number
+      <i *ngIf="currentSort === 'number' && sortReversed === false" class="material-icons arrow">arrow_downward</i>
+      <i *ngIf="currentSort === 'number' && sortReversed === true" class="material-icons arrow">arrow_upward</i>
+    </th>
     <td mat-cell *matCellDef="let ticket">{{ticket.id}}</td>
   </ng-container>
   <ng-container matColumnDef="status">
-    <th mat-header-cell *matHeaderCellDef> Status </th>
+    <th class="table-header" mat-header-cell *matHeaderCellDef (click)="sort.emit('status')">
+      Status
+      <i *ngIf="currentSort === 'status' && sortReversed === false" class="material-icons arrow">arrow_downward</i>
+      <i *ngIf="currentSort === 'status' && sortReversed === true" class="material-icons arrow">arrow_upward</i>
+    </th>
     <td mat-cell *matCellDef="let ticket">{{ticket.status}}</td>
   </ng-container>
   <ng-container matColumnDef="priority">
-    <th mat-header-cell *matHeaderCellDef> Priorty </th>
+    <th class="table-header" mat-header-cell *matHeaderCellDef (click)="sort.emit('priority')">
+      Priority
+      <i *ngIf="currentSort === 'priority' && sortReversed === false" class="material-icons arrow">arrow_downward</i>
+      <i *ngIf="currentSort === 'priority' && sortReversed === true" class="material-icons arrow">arrow_upward</i>
+    </th>
     <td mat-cell *matCellDef="let ticket">{{ticket.priority}}</td>
   </ng-container>
   <ng-container matColumnDef="shortDescription">
-    <th mat-header-cell *matHeaderCellDef> Short Description </th>
+    <th class="table-header" mat-header-cell *matHeaderCellDef (click)="sort.emit('shortDescription')">
+      Short Description
+      <i *ngIf="currentSort === 'shortDescription' && sortReversed === false" class="material-icons arrow">arrow_downward</i>
+      <i *ngIf="currentSort === 'shortDescription' && sortReversed === true" class="material-icons arrow">arrow_upward</i>
+    </th>
     <td mat-cell *matCellDef="let ticket">{{ticket.shortDescription}}</td>
   </ng-container>
-  <ng-container matColumnDef="description">
-    <th mat-header-cell *matHeaderCellDef> Description </th>
-    <td mat-cell *matCellDef="let ticket">{{ticket.description}}</td>
-  </ng-container>
-  <ng-container matColumnDef="actionsTaken">
-    <th mat-header-cell *matHeaderCellDef> Actions Taken </th>
-    <td mat-cell *matCellDef="let ticket">{{ticket.actionsTaken}}</td>
-  </ng-container>
   <ng-container matColumnDef="submissionDate">
-    <th mat-header-cell *matHeaderCellDef> Submission Date </th>
+    <th class="table-header" mat-header-cell *matHeaderCellDef (click)="sort.emit('submissionDate')">
+      Submission Date
+      <i *ngIf="currentSort === 'submissionDate' && sortReversed === false" class="material-icons arrow">arrow_downward</i>
+      <i *ngIf="currentSort === 'submissionDate' && sortReversed === true" class="material-icons arrow">arrow_upward</i>
+    </th>
     <td mat-cell *matCellDef="let ticket">{{ticket.submissionDate}}</td>
   </ng-container>
   <ng-container matColumnDef="updatedOn">
-    <th mat-header-cell *matHeaderCellDef> Updated On </th>
+    <th class="table-header" mat-header-cell *matHeaderCellDef (click)="sort.emit('updatedOn')">
+      Updated On
+      <i *ngIf="currentSort === 'updatedOn' && sortReversed === false" class="material-icons arrow">arrow_downward</i>
+      <i *ngIf="currentSort === 'updatedOn' && sortReversed === true" class="material-icons arrow">arrow_upward</i>
+    </th>
     <td mat-cell *matCellDef="let ticket">{{ticket.updatedOn}}</td>
   </ng-container>
   <ng-container matColumnDef="source">
-    <th mat-header-cell *matHeaderCellDef> Source </th>
+    <th class="table-header" mat-header-cell *matHeaderCellDef (click)="sort.emit('source')">
+      Source
+      <i *ngIf="currentSort === 'source' && sortReversed === false" class="material-icons arrow">arrow_downward</i>
+      <i *ngIf="currentSort === 'source' && sortReversed === true" class="material-icons arrow">arrow_upward</i>
+    </th>
     <td mat-cell *matCellDef="let ticket">{{ticket.source}}</td>
   </ng-container>
 
   <!-- Header Row -->
-  <tr mat-header-row *matHeaderRowDef="ticket_attr"></tr>
-  <tr mat-row *matRowDef="let row; columns: ticket_attr"></tr>
+  <tr mat-header-row *matHeaderRowDef="columns"></tr>
+  <tr mat-row *matRowDef="let row; columns: columns"></tr>
 
 </table>
 <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-
-<!-- <table class="table">
-  <thead>
-    <tr>
-      <th scope="col"> <a class="btn btn-link" href="#"> ID Number </a></th>
-      <th scope="col"> <a class="btn btn-link" href="#"> Status</a></th>
-    </tr>
-  </thead>
-</table> -->
-
-
-<!--
-<div *ngFor="let ticket of tickets">
-  <div class="row">
-    <div class="col">
-      {{ticket.id}}
-    </div>
-    <div class="col">
-      {{ticket.status}}
-    </div>
-    <div class="col">
-      {{ticket.priority}}
-    </div>
-    <div class="col">
-      {{ticket.shortDescription}}
-    </div>
-    <div class="col">
-      {{ticket.description}}
-    </div>
-    <div class="col">
-      {{ticket.submissionDate}}
-    </div>
-    <div class="col">
-      {{ticket.updatedOn}}
-    </div>
-    <div class="col">
-      {{ticket.source}}
-    </div>
-  </div>
-</div> -->
