@@ -87,3 +87,24 @@
 .help-icon:hover .help-text {
   visibility: visible;
 }
+// Main Nav
+.main-nav {
+  background-color: #66747e;
+  width: 150px;
+  text-align: center;
+  a {
+    color: white;
+    height: 100px;
+    padding: 2.5em 1em;
+  }
+  .filter-form {
+    color: white;
+    span {
+      font-size: 95%;
+      text-decoration: underline;
+    }
+    label {
+      font-size: 85%;
+    }
+  }
+}

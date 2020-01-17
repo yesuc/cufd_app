@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   }
 
   public submitSearch() {
-    let searchTerm = document.getElementById('input').value;
+    let searchTerm = (<HTMLInputElement>document.getElementById('input')).value;
     if (searchTerm) {
       this.showClearSearch = true;
     }
@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
     this.showClearSearch = false;
     this.filteredTickets = this.tickets;
     this.searchTerm = '';
-    document.getElementById('input').value = '';
+    (<HTMLInputElement>document.getElementById('input')).value = '';
   }
 
   public sort(field) {
